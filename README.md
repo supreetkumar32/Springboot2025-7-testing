@@ -69,3 +69,23 @@ the test. Useful in Unit Testing Service Layer and Persistence Layer.
 layer and not the entire context. Useful in Unit Testing Controller layer
 • @AutoConfigureTestDatabase: Used to replace the actual database with an embedded
 database during tests.
+
+now, we start writing the test in this commit.....press control + Shift + T
+
+Using @DataJpaTest Slice
+@DataJpaTest is tailored to test JPA components like repositories. It configures an
+in-memory database, sets up Spring Data JPA repositories, and scans for JPA
+entities. This makes it ideal for testing repository methods and their interactions
+with the database.
+
+When you use @DataJpaTest, each test method runs inside a database transaction.
+
+Flow of a single test
+Spring starts a transaction before the test method runs
+Your test:
+
+Saves entities
+Updates rows
+Deletes data
+
+When the test finishes, Spring automatically rolls back the transaction All database changes are undone. So nothing written to the database is permanently saved.
