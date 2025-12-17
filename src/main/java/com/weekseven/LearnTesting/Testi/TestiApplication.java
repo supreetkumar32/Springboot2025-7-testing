@@ -1,13 +1,13 @@
-package com.weekseven.testing.demo;
+package com.weekseven.LearnTesting.Testi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TestingAppApplication {
+public class TestiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TestingAppApplication.class, args);
+		SpringApplication.run(TestiApplication.class, args);
 	}
 
 }
